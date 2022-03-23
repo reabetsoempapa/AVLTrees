@@ -3,27 +3,50 @@
 // Hussein Suleman
 // reference: kukuruku.co/post/avl-trees/
 
+/**Represents an AVL Tree 
+*
+*
+*
+*/
+
 public class AVLTree<dataType extends Comparable<? super dataType>> extends BinaryTree<dataType>
 { 
    int count = 0;
    int insertCount = 0;
+/**
+*@ parm node 
+*@ return an integer of the height of the tree
+*
+*/
    public int height ( BinaryTreeNode<dataType> node )
    {
       if (node != null)
          return node.height;
       return -1;
    }
-   
+/**
+*
+* Checks the difference between the left and right side of tree
+*
+*/
    public int balanceFactor ( BinaryTreeNode<dataType> node )
    {
       return height (node.right) - height (node.left);
    }
-   
+/**
+*
+* S
+*
+*/
    public void fixHeight ( BinaryTreeNode<dataType> node )
    {
       node.height = Math.max (height (node.left), height (node.right)) + 1;
    }
-   
+/**
+*
+* Single Rotation Right
+*
+*/
    public BinaryTreeNode<dataType> rotateRight ( BinaryTreeNode<dataType> p )
    {
       BinaryTreeNode<dataType> q = p.left;
@@ -33,7 +56,11 @@ public class AVLTree<dataType extends Comparable<? super dataType>> extends Bina
       fixHeight (q);
       return q;
    }
-
+/**
+*
+* Single Rotation Left
+*
+*/
    public BinaryTreeNode<dataType> rotateLeft ( BinaryTreeNode<dataType> q )
    {
       BinaryTreeNode<dataType> p = q.right;
@@ -43,7 +70,11 @@ public class AVLTree<dataType extends Comparable<? super dataType>> extends Bina
       fixHeight (p);
       return p;
    }
-   
+/**
+*
+* Balances The AVL tree
+*
+*/
    public BinaryTreeNode<dataType> balance ( BinaryTreeNode<dataType> p )
    {
       fixHeight (p);
@@ -61,11 +92,20 @@ public class AVLTree<dataType extends Comparable<? super dataType>> extends Bina
       }
       return p;
    }
-
+/**
+*
+*
+*
+*/
    public void insert ( dataType d )
    {
       root = insert (d, root);
    }
+/**
+*
+* Inserts objects into the AVL Tree
+*
+*/
    public BinaryTreeNode<dataType> insert ( dataType d, BinaryTreeNode<dataType> node )
    {
       if (node == null)
@@ -77,11 +117,20 @@ public class AVLTree<dataType extends Comparable<? super dataType>> extends Bina
          node.right = insert (d, node.right);
       return balance (node);
    }
-   
+ /**
+*
+* Deletes objects in the AVL
+*
+*/
    public void delete ( dataType d )
    {
       root = delete (d, root);
-   }   
+   } 
+/**
+*
+*
+*
+*/  
    public BinaryTreeNode<dataType> delete ( dataType d, BinaryTreeNode<dataType> node )
    {
       if (node == null) return null;
@@ -104,7 +153,11 @@ public class AVLTree<dataType extends Comparable<? super dataType>> extends Bina
       }
       return balance (node);
    }
-   
+/**
+*
+*
+*
+*/
    public BinaryTreeNode<dataType> findMin ( BinaryTreeNode<dataType> node )
    {
       if (node.left != null)
@@ -112,7 +165,11 @@ public class AVLTree<dataType extends Comparable<? super dataType>> extends Bina
       else
          return node;
    }
-
+/**
+*
+*
+*
+*/
    public BinaryTreeNode<dataType> removeMin ( BinaryTreeNode<dataType> node )
    {
       if (node.left == null)
@@ -120,7 +177,11 @@ public class AVLTree<dataType extends Comparable<? super dataType>> extends Bina
       node.left = removeMin (node.left);
       return balance (node);
    }
-
+/**
+*
+*
+*
+*/
    public BinaryTreeNode<dataType> find ( dataType d )
    {
       if (root == null)
@@ -128,22 +189,36 @@ public class AVLTree<dataType extends Comparable<? super dataType>> extends Bina
       else
          return find (d, root);
    }
+/**
+*
+*
+*
+*/
    public BinaryTreeNode<dataType> find ( dataType d, BinaryTreeNode<dataType> node )
    {
       count++;
       if (d.compareTo (node.data) == 0) 
          return node;
-      count++;
+      //count++;
       if (d.compareTo (node.data) < 0)
          return (node.left == null) ? null : find (d, node.left);
       else
          return (node.right == null) ? null : find (d, node.right);
    }
-   
+/**
+*
+*
+*
+*/
    public void treeOrder ()
    {
       treeOrder (root, 0);
    }
+/**
+*
+*
+*
+*/
    public void treeOrder ( BinaryTreeNode<dataType> node, int level )
    {
       if (node != null)

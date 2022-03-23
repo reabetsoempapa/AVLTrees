@@ -1,7 +1,12 @@
 // Hussein's Binary Tree
 // 26 March 2017
 // Hussein Suleman
-
+/**
+* BinaryTreeNode object with attributes 
+* 
+* @author Rea
+* @version 1.0 23/03/2022
+*/
 public class BinaryTree<dataType>
 {
    BinaryTreeNode<dataType> root;

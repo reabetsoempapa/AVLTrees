@@ -1,8 +1,16 @@
 import java.util.Random;
 import java.io.*;
-
+/**
+* AVLExperiment  
+* @author Reabetsoe
+* @version 1.0
+*/
 public class AVLExperiment{
-
+/**
+* BinaryTreeNode object with attributes 
+* @parm randNum Amount of randomisation to be done
+* @parm array Array to be randomized
+*/
 public void randomization(String [] array, int randNum){
    int random1 = 0;
    int random2  = 0;
@@ -23,7 +31,11 @@ public void randomization(String [] array, int randNum){
    
 }
 
-
+/**
+*Main method to read in file count amount of insertion operations and find operations
+* 
+* 
+*/
 
 public static void main (String [] args){
 
