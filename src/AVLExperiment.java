@@ -5,7 +5,7 @@ public class AVLExperiment{
 
 public void randomization(String [] array, int randNum){
    int random1 = 0;
-   int random2 = 0;
+   int random2  = 0;
    for(int i = 0; i < randNum ; i++){
       Random rand = new Random();
       random1 = rand.nextInt(9918);
