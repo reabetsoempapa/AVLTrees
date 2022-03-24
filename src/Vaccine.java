@@ -1,7 +1,7 @@
 import java.io.*;
 /**
-* Vaccine object with attributes 
-* 
+* The Vaccine class with Fields country, date, vaccinations and key ( concatination of country and date ) 
+* It contains constructors and one method 
 * @author Rea
 * @version 1.0 23/03/2022
 */
@@ -12,8 +12,9 @@ String vaccinations;
 String key;
 
 /** 
-* 
-* @parm line Takes in a String line and converts it into a vaccine object by spliting it
+* @ return Nothing
+* @ exception NullPointerException 
+* @parm line Takes in a String line and converts it into a vaccine object by spliting it and assigning each index to an attribute
 */
 public Vaccine (String line ){
     String [] parts = null;
@@ -39,8 +40,10 @@ public Vaccine (String line ){
    
 } // Vaccine constructor takes in line and splits it to make a vaccine obejct
 /**
+* This contructor takes in two strings and creates a vaccine object
 * @parm c The vaccines country attribute
 * @parm d The vaccines date attribute
+* @return Nothing
 */
 public Vaccine(String c , String d){
     country = c;
@@ -48,6 +51,7 @@ public Vaccine(String c , String d){
     key = c+d;
 }// VAccine constructor that takes in country and date
 /**
+* CompareTo method compares two object and returns an integer 
 * @returns an integer representing comparison between two countries 
 * @parm other  
 */
