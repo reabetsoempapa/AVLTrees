@@ -4,10 +4,11 @@ import java.io.*;
 * AVLExperiment  
 * @author Reabetsoe
 * @version 1.0
+* This class is used to randomize data and create an array of vaccine objects that will be inserted into the AVL treee
 */
 public class AVLExperiment{
 /**
-* BinaryTreeNode object with attributes 
+* This method takes in an array of strings and an integer representing the amount of randomization to be done (number of swaps to be done)
 * @parm randNum Amount of randomisation to be done
 * @parm array Array to be randomized
 */
@@ -33,8 +34,10 @@ public void randomization(String [] array, int randNum){
 
 /**
 *Main method to read in file count amount of insertion operations and find operations
-* 
-* 
+*The main method makes use of the randomization method and creates an AVLExperiment and AVLTree of vaccine type
+*The randomized data is read, inserted into an AVL tree and each object in the AVL is searched for in the AVL, The number of comparison operations for inserting and searching are stored in different text files
+* @ return Nothing
+*@ exception ArrayIndexOutOfBoundsException, FileNotFoundException
 */
 
 public static void main (String [] args){
