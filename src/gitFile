@@ -1,21 +1,11 @@
-0: commit 1e959164619ecc434d5a4e85855dd970413adddb
+0: commit fa19cfb34e5bde4afdd8a28223ec49306a8aae31
 1: Author: Reabetsoe <mpprea001@myuct.ac.za>
-2: Date: Wed Mar 23 14:57:48 2022 +0200
+2: Date: Thu Mar 24 12:40:05 2022 +0200
 3:
-4: Fixed errors in the AVLExperiment file
+4: Added automation pyhton file
 5:
-6: commit ec8c646bd6d798d86cd92eda7a905da856b888d1
+6: commit 85d6d3242e7e6e0f2e212a0e399ee5c5d4eadeb7
 7: Author: Reabetsoe <mpprea001@myuct.ac.za>
-8: Date: Wed Mar 23 14:56:26 2022 +0200
+8: Date: Thu Mar 24 12:38:44 2022 +0200
 9:
 ...
-13: Author: Reabetsoe <mpprea001@myuct.ac.za>
-14: Date: Wed Mar 23 13:41:09 2022 +0200
-15:
-16: Added all the other files
-17:
-18: commit f9c43e6281a5d4b28ebbe2edc1a6609d5d10c7b8
-19: Author: Reabetsoe <mpprea001@myuct.ac.za>
-20: Date: Wed Mar 23 13:40:09 2022 +0200
-21:
-22: Added the first java file I need for the experiment
